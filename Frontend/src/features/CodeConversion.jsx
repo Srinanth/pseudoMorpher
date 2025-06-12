@@ -4,7 +4,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 
-const languages = ["C", "Java", "Assembly", "Pseudocode"];
+const languages = ["Psuedo Code","C", "Java", "Assembly", "Python", "JavaScript", "C++", "C#", "Go", "Rust", "Ruby", "Swift", "Kotlin", "PHP", "TypeScript"];
 
 export default function CodeConversion({
   inputLang,
@@ -14,7 +14,6 @@ export default function CodeConversion({
   setInputLang,
   setOutputLang,
   setInputCode,
-  setOutputCode
 }) {
   return (
     <Grid container spacing={4} justifyContent="center">
