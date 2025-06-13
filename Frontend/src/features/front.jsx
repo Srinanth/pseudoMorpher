@@ -9,8 +9,8 @@ import CodeConversion from "./CodeConversion";
 import DownloadFeature from "./DownloadFeature.jsx";
 
 export default function FrontPageUI() {
-  const [inputLang, setInputLang] = useState("C");
-  const [outputLang, setOutputLang] = useState("Pseudocode");
+  const [inputLang, setInputLang] = useState("Pseudocode");
+  const [outputLang, setOutputLang] = useState("");
   const [inputCode, setInputCode] = useState("");
   const [outputCode, setOutputCode] = useState("");
   const [mode, setMode] = useState("code");
