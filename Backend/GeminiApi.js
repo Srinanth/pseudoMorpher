@@ -14,27 +14,24 @@ router.post("/convert", async (req, res) => {
 
   const prompt = `You are a highly accurate code and pseudocode conversion assistant. Your task is to convert the given input code into the specified target format with maximum precision, minimal verbosity, and optimal efficiency.
 
-### Conversion Guidelines:
-1. **Target Format**: ${targetLang || "pseudocode"}
+Conversion Guidelines:
+1. Target Format: ${targetLang || "pseudocode"}
    - If the target format is "pseudocode" or not provided, convert the input into concise, logically structured pseudocode using generic syntax.
    - If the target format is a programming language (e.g., C, Java, Assembly), generate syntactically valid and executable code in that language.
 
-2. **Output Rules**:
-   - Output only the converted code or pseudocode. **No explanations, comments, or extra formatting**.
-   - Eliminate all unnecessary lines or variables. Prioritize brevity without losing functionality or clarity.
-   - Do **not** add comments or annotations.
-   - Write in a compact, highly efficient style.
-   - Use standard conventions for the target format.
+2. Output Rules:
+   - Output only the converted code or pseudocode.
+   - Do not include any explanations, comments, code fences (like triple backticks), or language identifiers.
+   - Eliminate unnecessary lines or variables.
+   - Use a compact, efficient, and idiomatic style for the target language.
+   - Maintain logical and functional accuracy of the original input.
 
-3. **Input Structure**:
-   - The input may be a full program, function, or code snippet.
-   - Analyze its logic thoroughly before converting.
-
-### Input Code:
+3. Input:
 ${input}
 
-### Converted Output (${targetLang || "pseudocode"}):
+Now output only the converted ${targetLang || "pseudocode"} code, and nothing else. Do not use any markdown, formatting, comments, or language labels. Just return the raw code in the most efficient form.
 `;
+
 
 
   try {

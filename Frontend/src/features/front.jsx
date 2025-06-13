@@ -49,7 +49,7 @@ const handleExplain = async () => {
       const response = await fetch("http://localhost:3000/api/gemini/explain", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ input: inputCode })
+        body: JSON.stringify({ input: outputCode })
       });
       const data = await response.json();
       setExplanation(data.explanation);
