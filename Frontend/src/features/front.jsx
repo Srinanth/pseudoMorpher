@@ -22,7 +22,7 @@ export default function FrontPageUI() {
   const handleConvert = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:3000/api/gemini/convert", {
+      const response = await fetch("https://pseudomorpher.onrender.com/api/gemini/convert", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -45,7 +45,7 @@ export default function FrontPageUI() {
   const handleExplain = async () => {
     setExplaining(true);
     try {
-      const response = await fetch("http://localhost:3000/api/gemini/explain", {
+      const response = await fetch("https://pseudomorpher.onrender.com/api/gemini/explain", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ input: outputCode })
