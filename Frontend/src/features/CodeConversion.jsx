@@ -41,7 +41,7 @@ export default function CodeConversion({
     if (!extension) return "";
     
     try {
-      const response = await fetch(`../public/samplecode/sample.${extension}`);
+      const response = await fetch(`/samplecode/sample.${extension}`);
       if (!response.ok) return "";
       return await response.text();
     } catch (error) {
